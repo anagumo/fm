@@ -18,9 +18,11 @@ public class HypedArtistsResponse {
         return results.artists;
     }
 
-    private class HypedArtistsResults {
+    public void setArtist(ArrayList<Artist> artist){
+        this.results.artists = artist;
+    }
 
-        @SerializedName(JsonKeys.ARTIST_ARRAY)
+    private class HypedArtistsResults {
         ArrayList<Artist> artists;
     }
 }

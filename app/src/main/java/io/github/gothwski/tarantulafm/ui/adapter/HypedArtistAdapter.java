@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import io.github.gothwski.tarantulafm.R;
@@ -41,6 +43,12 @@ public class HypedArtistAdapter extends RecyclerView.Adapter<HypedArtistAdapter.
         Artist currentArtist = arists.get(position);
 
         holder.setArtistName(currentArtist.getName());
+
+        if (currentArtist.getUrlMediumImage() != null)
+            holder.setArtistImage(currentArtist.getUrlMediumImage());
+
+        else
+            holder.setArtistDefaultImage();
     }
 
     //
@@ -72,6 +80,19 @@ public class HypedArtistAdapter extends RecyclerView.Adapter<HypedArtistAdapter.
 
         public void setArtistName (String name) {
             artistName.setText(name);
+        }
+
+        public void setArtistImage (String url) {
+            Picasso.with(context)
+                    .load(url)
+                    .placeholder(R.drawable.artist_placeholder)
+                    .into(artistImage);
+        }
+
+        public void setArtistDefaultImage() {
+            Picasso.with(context)
+                    .load(R.drawable.artist_placeholder)
+                    .into(artistImage);
         }
     }
 }

@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import io.github.gothwski.tarantulafm.R;
-import io.github.gothwski.tarantulafm.io.LastFMAdapter;
+import io.github.gothwski.tarantulafm.io.LastFmAdapter;
 import io.github.gothwski.tarantulafm.io.model.HypedArtistsResponse;
 import io.github.gothwski.tarantulafm.ui.adapter.HypedArtistAdapter;
 import retrofit.Callback;
@@ -62,7 +62,7 @@ public class HypedArtistFragment extends Fragment implements Callback<HypedArtis
     public void onResume() {
         super.onResume();
 
-        LastFMAdapter.getApiService()
+        LastFmAdapter.getApiService()
                 .getHypedArtists(this);
     }
 
