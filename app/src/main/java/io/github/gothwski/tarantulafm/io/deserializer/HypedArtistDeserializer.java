@@ -18,7 +18,7 @@ import io.github.gothwski.tarantulafm.io.model.JsonKeys;
 /**
  * Created by ariana gothwski on 11/07/15.
  */
-public class MyHypedArtistDeserializer implements JsonDeserializer<HypedArtistsResponse> {
+public class HypedArtistDeserializer implements JsonDeserializer<HypedArtistsResponse> {
     @Override
     public HypedArtistsResponse deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
         Gson gson = new Gson();

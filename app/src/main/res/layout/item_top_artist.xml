@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_top_artist_height">
+
+    <ImageView
+        android:id="@+id/img_artist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/artist_placeholder"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/primary_dark_transparency">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_artist"
+            android:textSize="26sp"
+            android:gravity="center"
+            android:textColor="@color/text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/txt_playcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_playcount"
+                android:drawableStart="@drawable/ic_playcount"
+                android:text="@string/txt_playcount"
+                android:textColor="@color/text"
+                android:layout_marginRight="4dp"
+                android:layout_marginEnd="4dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/txt_listeners"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_listener"
+                android:drawableStart="@drawable/ic_listener"
+                android:text="@string/txt_listeners"
+                android:textColor="@color/text"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

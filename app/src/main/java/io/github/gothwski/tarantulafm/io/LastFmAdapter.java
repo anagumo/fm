@@ -3,8 +3,10 @@ package io.github.gothwski.tarantulafm.io;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import io.github.gothwski.tarantulafm.io.deserializer.MyHypedArtistDeserializer;
+import io.github.gothwski.tarantulafm.io.deserializer.HypedArtistDeserializer;
+import io.github.gothwski.tarantulafm.io.deserializer.TopArtistDeserializer;
 import io.github.gothwski.tarantulafm.io.model.HypedArtistsResponse;
+import io.github.gothwski.tarantulafm.io.model.TopArtistResponse;
 import retrofit.RestAdapter;
 import retrofit.converter.GsonConverter;
 
@@ -31,7 +33,8 @@ public class LastFmAdapter {
 
     private static GsonConverter buildLastFmApiConverter() {
         Gson gsonConf = new GsonBuilder()
-                .registerTypeAdapter(HypedArtistsResponse.class, new MyHypedArtistDeserializer())
+                .registerTypeAdapter(HypedArtistsResponse.class, new HypedArtistDeserializer())
+                .registerTypeAdapter(TopArtistResponse.class, new TopArtistDeserializer())
                 .create();
 
         return new GsonConverter(gsonConf);

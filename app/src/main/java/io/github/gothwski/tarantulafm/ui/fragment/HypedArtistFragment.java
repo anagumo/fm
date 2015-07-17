@@ -1,4 +1,4 @@
-package io.github.gothwski.tarantulafm.ui;
+package io.github.gothwski.tarantulafm.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import io.github.gothwski.tarantulafm.R;
 import io.github.gothwski.tarantulafm.io.LastFmAdapter;
 import io.github.gothwski.tarantulafm.io.model.HypedArtistsResponse;
+import io.github.gothwski.tarantulafm.ui.ItemOffsetDecoration;
 import io.github.gothwski.tarantulafm.ui.adapter.HypedArtistAdapter;
 import retrofit.Callback;
 import retrofit.RetrofitError;

@@ -3,7 +3,8 @@ package io.github.gothwski.tarantulafm;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import io.github.gothwski.tarantulafm.ui.HypedArtistFragment;
+import io.github.gothwski.tarantulafm.ui.fragment.HypedArtistFragment;
+import io.github.gothwski.tarantulafm.ui.fragment.TopArtistFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.main_container, new HypedArtistFragment())
+                    .add(R.id.main_container, new TopArtistFragment())
                     .commit();
         }
     }

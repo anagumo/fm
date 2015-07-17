@@ -10,11 +10,28 @@ import io.github.gothwski.tarantulafm.io.model.JsonKeys;
 public class Artist {
 
     @SerializedName(JsonKeys.ARTIST_NAME)
-
     String name;
 
     String urlMediumImage;
     String urlLargeImage;
+    String playcount;
+    String listeners;
+
+    public String getPlaycount() {
+        return playcount;
+    }
+
+    public void setPlaycount(String playcount) {
+        this.playcount = playcount;
+    }
+
+    public String getListeners() {
+        return listeners;
+    }
+
+    public void setListeners(String listeners) {
+        this.listeners = listeners;
+    }
 
     public Artist() {
     }

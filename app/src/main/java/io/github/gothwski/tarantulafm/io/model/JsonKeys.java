@@ -13,4 +13,6 @@ public class JsonKeys {
     public static final String IMAGE_URL = "#text";
     public static final String IMAGE_MEDIUM = "extralarge";
     public static final String IMAGE_LARGE = "mega";
+    public static final String ARTIST_PLAYCOUNT = "playcount";
+    public static final String ARTIST_LISTENERS = "listeners";
 }
